@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @Suaid2005
+- 👋 Hi, I’m Muhammad Suaid
 - 👀 I’m interested in DevOps Engineering
 - 🌱 I’m currently learning B.Tech in Computer science and technology allied with DevOps
-- 💞️ I’m looking to collaborate on GitHub
+- 🖇️ I’m looking to collaborate on GitHub
 - 📫 How to reach me - suaidputhrabail75@gmail.com
 
 <!---
