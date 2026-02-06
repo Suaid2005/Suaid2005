@@ -1,0 +1,72 @@
+import random
+from collections import deque
+import time
+
+# -----------------------------
+# Graph parameters
+# -----------------------------
+N = 1_000_000       # Number of nodes
+E = 2_000_000       # Number of edges
+
+print("Generating graph...")
+start_time = time.time()
+
+# Initialize adjacency list
+graph = [[] for _ in range(N)]
+
+# Generate random edges
+for _ in range(E):
+    u = random.randint(0, N - 1)
+    v = random.randint(0, N - 1)
+    if u != v:
+        graph[u].append(v)
+        graph[v].append(u)   # undirected
+
+print(f"Graph generated in {time.time() - start_time:.2f} seconds.")
+
+# -----------------------------
+# BFS Traversal
+# -----------------------------
+print("\nStarting BFS...")
+start_time = time.time()
+visited_bfs = bytearray(N)  # 1 byte per node
+queue = deque([0])
+visited_bfs[0] = 1
+bfs_count = 0
+
+while queue:
+    node = queue.popleft()
+    bfs_count += 1
+    # For large graphs, print progress every 100k nodes
+    if bfs_count % 100_000 == 0:
+        print(f"BFS visited {bfs_count} nodes...")
+    for nbr in graph[node]:
+        if not visited_bfs[nbr]:
+            visited_bfs[nbr] = 1
+            queue.append(nbr)
+
+print(f"BFS completed. Total visited nodes: {bfs_count}")
+print(f"BFS time: {time.time() - start_time:.2f} seconds")
+
+# -----------------------------
+# DFS Traversal (iterative)
+# -----------------------------
+print("\nStarting DFS...")
+start_time = time.time()
+visited_dfs = bytearray(N)
+stack = [0]
+visited_dfs[0] = 1
+dfs_count = 0
+
+while stack:
+    node = stack.pop()
+    dfs_count += 1
+    if dfs_count % 100_000 == 0:
+        print(f"DFS visited {dfs_count} nodes...")
+    for nbr in graph[node]:
+        if not visited_dfs[nbr]:
+            visited_dfs[nbr] = 1
+            stack.append(nbr)
+
+print(f"DFS completed. Total visited nodes: {dfs_count}")
+print(f"DFS time: {time.time() - start_time:.2f} seconds")
