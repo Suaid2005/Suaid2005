@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <time.h>
+int linearSearch(int a[], int n, int key) {
+    for (int i = 0; i < n; i++) {
+        if (a[i] == key) {
+            return i;
+        }
+    }
+    return -1;
+}
+int binarySearch(int a[], int n, int key) {
+    int low = 0, high = n - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (a[mid] == key) {
+            return mid;
+        } else if (a[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1;
+}
+void displayArray(int a[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+int main() {
+    int n, key;
+    clock_t start, end;
+    double time_taken;
+    printf("Enter no. of elements: ");
+    scanf("%d", &n);
+    int a[n];
+    printf("Enter elements: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+    start = clock();
+    int linIndex = linearSearch(a, n, key);
+    end = clock();
+    time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
+    if (linIndex != -1)
+        printf("Linear Search: Key found at index %d\n", linIndex);
+    }else{
+        printf("Linear Search: Key not found\n");
+    displayArray(a, n);
+    printf("Time taken by Linear Search: %f seconds\n", time_taken);
+    start = clock();
+    int binIndex = binarySearch(a, n, key);
+    end = clock();
+    time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
+    if (binIndex != -1)
+        printf("Binary Search: Key found at index %d\n", binIndex);
+    }else{
+        printf("Binary Search: Key not found\n");
+    displayArray(a, n);
+    printf("Time taken by Binary Search: %f seconds\n", time_taken);
+    return 0;
+}
