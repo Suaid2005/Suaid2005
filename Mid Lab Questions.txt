@@ -1,0 +1,14 @@
+Question 1
+Write a Python program to read a text file line by line and display each line with line numbers. The program should handle file not found exceptions.
+Question 2
+Write a Python program to parse a structured text file such as CSV or JSON and extract fields into Python dictionaries or objects. The program should validate the file format and handle malformed records.
+Question 3
+Write a Python program to implement graph data structures using adjacency list and adjacency matrix. Accept graph input from the console and perform basic operations such as adding and removing nodes and edges.
+Question 4
+Write a Python program to create and visualize graphs using the NetworkX and Matplotlib libraries. The program should support graph data input from CSV or JSON files.
+Question 5
+Write a Python program to implement Breadth-First Search (BFS) and Depth-First Search (DFS) traversals on an unweighted graph.
+Question 6
+Write a Python program to implement Uniform Cost Search (UCS) on a weighted graph to find the minimum-cost path between two nodes.
+Question 7
+Write a Python program to implement the A (A-Star) search algorithm to find the shortest path between a start node and a goal node using heuristic values.*
