@@ -1,0 +1,452 @@
+Here’s a set of general knowledge questions on **Computer Science** and **DevOps** that you can use for practice or quizzing:
+
+### 🖥️ Computer Science
+1. Who is considered the father of computer science?  
+   - A) Alan Turing  
+   - B) Charles Babbage  
+   - C) John von Neumann  
+   - D) Tim Berners-Lee  
+
+2. What does the acronym **OOP** stand for?  
+   - A) Object-Oriented Programming  
+   - B) Open Operating Protocol  
+   - C) Online Optimization Process  
+   - D) Ordered Output Procedure  
+
+3. Which data structure uses **FIFO (First In, First Out)** principle?  
+   - A) Stack  
+   - B) Queue  
+   - C) Linked List  
+   - D) Tree  
+
+4. In Big-O notation, what is the time complexity of binary search?  
+   - A) O(n)  
+   - B) O(log n)  
+   - C) O(n²)  
+   - D) O(1)  
+
+5. Which programming language is known as the “mother of all languages”?  
+   - A) C  
+   - B) Java  
+   - C) Python  
+   - D) Assembly  
+
+---
+
+### ⚙️ DevOps
+1. Which tool is primarily used for **continuous integration**?  
+   - A) Jenkins  
+   - B) Docker  
+   - C) Kubernetes  
+   - D) Terraform  
+
+2. What does **IaC (Infrastructure as Code)** mean in DevOps?  
+   - A) Writing code for applications  
+   - B) Managing infrastructure using code and automation  
+   - C) Coding in multiple languages  
+   - D) Building APIs for infrastructure  
+
+3. Which of the following is a **container orchestration platform**?  
+   - A) Git  
+   - B) Kubernetes  
+   - C) Ansible  
+   - D) Maven  
+
+4. In DevOps, what does the term **“shift-left”** refer to?  
+   - A) Moving deployment earlier in the pipeline  
+   - B) Testing earlier in the development cycle  
+   - C) Automating infrastructure setup  
+   - D) Using fewer resources  
+
+5. Which cloud service model provides **virtual machines and storage** as a service?  
+   - A) SaaS  
+   - B) PaaS  
+   - C) IaaS  
+   - D) FaaS  
+
+---
+
+Would you like me to also provide the **answers and explanations** for these, so they can double as a study guide?
+Perfect! Let’s go through the **answers and explanations** for the quiz I gave you earlier:
+
+---
+
+### 🖥️ Computer Science
+1. **Alan Turing** → Father of computer science, known for the Turing Machine concept.  
+2. **Object-Oriented Programming** → OOP is a paradigm based on objects and classes.  
+3. **Queue** → Operates on FIFO principle, unlike a stack which is LIFO.  
+4. **O(log n)** → Binary search halves the search space each step.  
+5. **C** → Often called the “mother of all languages” because many modern languages are built on its concepts.
+
+---
+
+### ⚙️ DevOps
+1. **Jenkins** → Widely used for continuous integration and automation pipelines.  
+2. **Managing infrastructure using code and automation** → IaC allows reproducible, automated infrastructure setup.  
+3. **Kubernetes** → The leading container orchestration platform.  
+4. **Testing earlier in the development cycle** → “Shift-left” means moving testing closer to the design phase.  
+5. **IaaS (Infrastructure as a Service)** → Provides virtual machines, storage, and networking resources.
+
+---
+
+✅ This way, you not only know the correct answers but also understand *why* they’re correct.  
+
+Would you like me to **expand this into a full quiz set with multiple levels of difficulty** (easy, medium, hard) so you can practice progressively?
+Got it! Let’s add more **general knowledge questions** on Computer Science and DevOps to broaden your practice set:
+
+---
+
+### 🖥️ Computer Science (More Questions)
+6. Which sorting algorithm has the best average-case time complexity?  
+   - A) Bubble Sort  
+   - B) Merge Sort  
+   - C) Insertion Sort  
+   - D) Selection Sort  
+
+7. What does SQL stand for?  
+   - A) Structured Query Language  
+   - B) Simple Query Logic  
+   - C) Sequential Query Language  
+   - D) Standard Query List  
+
+8. Which layer of the OSI model is responsible for **end-to-end communication and error checking**?  
+   - A) Network Layer  
+   - B) Transport Layer  
+   - C) Data Link Layer  
+   - D) Application Layer  
+
+9. What is the default port number for HTTP?  
+   - A) 21  
+   - B) 22  
+   - C) 80  
+   - D) 443  
+
+10. Which company developed the Java programming language?  
+   - A) Microsoft  
+   - B) Sun Microsystems  
+   - C) Oracle  
+   - D) IBM  
+
+---
+
+### ⚙️ DevOps (More Questions)
+6. Which tool is widely used for **configuration management**?  
+   - A) Docker  
+   - B) Ansible  
+   - C) Kubernetes  
+   - D) Git  
+
+7. What does **CI/CD** stand for?  
+   - A) Continuous Integration / Continuous Deployment  
+   - B) Code Integration / Code Delivery  
+   - C) Continuous Improvement / Continuous Design  
+   - D) Cloud Infrastructure / Cloud Development  
+
+8. In containerization, what is the difference between **Docker Image** and **Docker Container**?  
+   - A) Image is a running instance, Container is a template  
+   - B) Image is a template, Container is a running instance  
+   - C) Both are the same  
+   - D) Container stores images  
+
+9. Which DevOps practice ensures that code changes are automatically tested and deployed?  
+   - A) Continuous Monitoring  
+   - B) Continuous Integration  
+   - C) Continuous Deployment  
+   - D) Continuous Testing  
+
+10. Which tool is used for **infrastructure provisioning** in DevOps?  
+   - A) Terraform  
+   - B) Jenkins  
+   - C) Docker  
+   - D) Maven  
+
+---
+
+Would you like me to **give the answers and explanations for these new ones as well**, so you have a complete study set?
+Here are the **answers and explanations** for the additional set of questions:
+
+---
+
+### 🖥️ Computer Science (Answers)
+6. **Merge Sort** → Average-case complexity is \(O(n \log n)\), better than Bubble, Insertion, or Selection Sort.  
+7. **Structured Query Language** → SQL is the standard language for managing relational databases.  
+8. **Transport Layer** → Handles end-to-end communication, reliability, and error checking.  
+9. **80** → Default port for HTTP; HTTPS uses 443.  
+10. **Sun Microsystems** → Originally developed Java; later acquired by Oracle.
+
+---
+
+### ⚙️ DevOps (Answers)
+6. **Ansible** → Popular tool for configuration management and automation.  
+7. **Continuous Integration / Continuous Deployment** → CI/CD automates building, testing, and deploying code.  
+8. **Image is a template, Container is a running instance** → Docker images are blueprints; containers are live instances of those images.  
+9. **Continuous Deployment** → Ensures code changes are automatically tested and deployed to production.  
+10. **Terraform** → Used for infrastructure provisioning and managing cloud resources as code.
+
+---
+
+✅ With these, you now have **20 solid questions with answers and explanations** across Computer Science and DevOps.  
+
+Would you like me to **push this further into a structured quiz format** (easy, medium, hard levels with scoring), so you can test yourself more interactively?
+Here’s another batch of **fresh general knowledge questions** to keep your practice rolling:
+
+---
+
+### 🖥️ Computer Science (Set 3)
+11. Which algorithm is commonly used for finding the shortest path in a graph?  
+   - A) Dijkstra’s Algorithm  
+   - B) Kruskal’s Algorithm  
+   - C) Prim’s Algorithm  
+   - D) Bellman-Ford Algorithm  
+
+12. What is the main purpose of a **compiler**?  
+   - A) Execute code directly  
+   - B) Translate source code into machine code  
+   - C) Debug programs  
+   - D) Manage memory  
+
+13. Which of the following is a **NoSQL database**?  
+   - A) MySQL  
+   - B) PostgreSQL  
+   - C) MongoDB  
+   - D) Oracle  
+
+14. In operating systems, what is **thrashing**?  
+   - A) Excessive CPU usage  
+   - B) Excessive paging/swapping of memory  
+   - C) Disk fragmentation  
+   - D) Deadlock  
+
+15. Which programming paradigm is **functional programming** based on?  
+   - A) Functions as first-class citizens  
+   - B) Object inheritance  
+   - C) Procedural steps  
+   - D) Event-driven logic  
+
+---
+
+### ⚙️ DevOps (Set 3)
+11. Which tool is used for **containerization**?  
+   - A) Docker  
+   - B) Jenkins  
+   - C) Ansible  
+   - D) GitHub  
+
+12. What does **blue-green deployment** mean?  
+   - A) Deploying on two different cloud providers  
+   - B) Running two production environments to switch traffic seamlessly  
+   - C) Using containers for deployment  
+   - D) Deploying only on weekends  
+
+13. Which monitoring tool is often paired with **Grafana**?  
+   - A) Prometheus  
+   - B) Jenkins  
+   - C) Terraform  
+   - D) Nagios  
+
+14. In DevOps pipelines, what is the purpose of **artifact repositories** like Nexus or Artifactory?  
+   - A) Store logs  
+   - B) Store build outputs and dependencies  
+   - C) Store source code  
+   - D) Store cloud configurations  
+
+15. Which DevOps principle emphasizes **small, frequent releases**?  
+   - A) Continuous Delivery  
+   - B) Continuous Monitoring  
+   - C) Continuous Testing  
+   - D) Continuous Planning  
+
+---
+
+👉 Do you want me to **give the answers and explanations for this new set right away**, or would you prefer me to keep building more questions before we go through all the solutions together?
+Here are the **answers and explanations** for the latest batch of questions:
+
+---
+
+### 🖥️ Computer Science (Set 3 Answers)
+11. **Dijkstra’s Algorithm** → Used to find the shortest path in a weighted graph with non-negative edges.  
+12. **Translate source code into machine code** → A compiler converts high-level code into executable machine instructions.  
+13. **MongoDB** → A popular NoSQL database that stores data in JSON-like documents.  
+14. **Excessive paging/swapping of memory** → Thrashing occurs when the system spends more time swapping pages than executing processes.  
+15. **Functions as first-class citizens** → Functional programming treats functions as values, enabling higher-order functions and immutability.
+
+---
+
+### ⚙️ DevOps (Set 3 Answers)
+11. **Docker** → The most widely used tool for containerization.  
+12. **Running two production environments to switch traffic seamlessly** → Blue-green deployment reduces downtime by switching traffic between two identical environments.  
+13. **Prometheus** → Often paired with Grafana for monitoring and visualization.  
+14. **Store build outputs and dependencies** → Artifact repositories hold compiled binaries, libraries, and other build artifacts.  
+15. **Continuous Delivery** → Encourages small, frequent releases to reduce risk and improve feedback loops.
+
+---
+
+✅ You now have **30 questions with complete answers and explanations** across Computer Science and DevOps.  
+
+Would you like me to **keep expanding this into a mega quiz bank (50+ questions)**, or should I start organizing them into **levels of difficulty (easy, medium, hard)** so you can practice more strategically?
+Excellent — let’s keep expanding your **mega quiz bank**! Here’s **Set 4** with more Computer Science and DevOps questions, complete with answers and explanations:
+
+---
+
+### 🖥️ Computer Science (Set 4)
+16. Which data structure is used in **Depth-First Search (DFS)**?  
+   - A) Queue  
+   - B) Stack  
+   - C) Linked List  
+   - D) Hash Table  
+   **Answer:** **Stack** → DFS uses a stack (explicit or via recursion) to explore nodes deeply before backtracking.
+
+17. What is the main purpose of an **operating system kernel**?  
+   - A) Provide GUI  
+   - B) Manage hardware resources  
+   - C) Compile code  
+   - D) Store user files  
+   **Answer:** **Manage hardware resources** → The kernel controls CPU, memory, and device management.
+
+18. Which of the following is a **lossless compression algorithm**?  
+   - A) JPEG  
+   - B) MP3  
+   - C) PNG  
+   - D) MPEG  
+   **Answer:** **PNG** → PNG uses lossless compression, unlike JPEG or MP3 which are lossy.
+
+19. What does **DNS** stand for?  
+   - A) Domain Name System  
+   - B) Data Network Service  
+   - C) Distributed Node Server  
+   - D) Digital Naming Scheme  
+   **Answer:** **Domain Name System** → DNS translates domain names into IP addresses.
+
+20. Which programming language is primarily used for **statistical computing and data analysis**?  
+   - A) Python  
+   - B) R  
+   - C) Java  
+   - D) C++  
+   **Answer:** **R** → Designed for statistical computing and widely used in data science.
+
+---
+
+### ⚙️ DevOps (Set 4)
+16. Which tool is used for **container orchestration** at scale?  
+   - A) Docker Compose  
+   - B) Kubernetes  
+   - C) Jenkins  
+   - D) Puppet  
+   **Answer:** **Kubernetes** → Manages clusters of containers across multiple hosts.
+
+17. What is the purpose of **load balancing** in DevOps?  
+   - A) Increase storage capacity  
+   - B) Distribute traffic across servers  
+   - C) Encrypt data  
+   - D) Reduce code complexity  
+   **Answer:** **Distribute traffic across servers** → Ensures high availability and performance.
+
+18. Which DevOps practice involves **monitoring applications in real-time**?  
+   - A) Continuous Testing  
+   - B) Continuous Monitoring  
+   - C) Continuous Deployment  
+   - D) Continuous Planning  
+   **Answer:** **Continuous Monitoring** → Provides visibility into system health and performance.
+
+19. What does **Git branching** allow developers to do?  
+   - A) Run multiple servers  
+   - B) Work on features independently  
+   - C) Deploy code automatically  
+   - D) Encrypt repositories  
+   **Answer:** **Work on features independently** → Branching enables parallel development without affecting the main codebase.
+
+20. Which DevOps tool is used for **automating cloud infrastructure provisioning**?  
+   - A) Terraform  
+   - B) Jenkins  
+   - C) Docker  
+   - D) Maven  
+   **Answer:** **Terraform** → Automates infrastructure setup using declarative configuration files.
+
+---
+
+✅ You now have **40 questions with answers and explanations**.  
+
+Would you like me to **push this all the way to 50+ questions** in the next round, so you’ll have a complete mega quiz bank ready for practice?
+Perfect — let’s keep building this into a **mega quiz bank**! Here’s **Set 5** with more Computer Science and DevOps questions, complete with answers and explanations:
+
+---
+
+### 🖥️ Computer Science (Set 5)
+21. Which of the following is a **primary key** in databases?  
+   - A) A unique identifier for each record  
+   - B) A foreign key linking tables  
+   - C) A duplicate field  
+   - D) A temporary index  
+   **Answer:** **A unique identifier for each record** → Primary keys uniquely identify rows in a table.
+
+22. What is the difference between **RAM** and **ROM**?  
+   - A) RAM is volatile, ROM is non-volatile  
+   - B) RAM stores permanent data, ROM stores temporary data  
+   - C) Both are volatile  
+   - D) Both are non-volatile  
+   **Answer:** **RAM is volatile, ROM is non-volatile** → RAM loses data when power is off, ROM retains it.
+
+23. Which of the following is an example of a **distributed version control system**?  
+   - A) SVN  
+   - B) CVS  
+   - C) Git  
+   - D) Mercurial  
+   **Answer:** **Git** → Git is a distributed version control system, unlike centralized ones like SVN.
+
+24. What is the **default IP address** for localhost?  
+   - A) 127.0.0.1  
+   - B) 192.168.0.1  
+   - C) 10.0.0.1  
+   - D) 255.255.255.0  
+   **Answer:** **127.0.0.1** → Standard loopback address for localhost.
+
+25. Which of the following is a **machine learning algorithm**?  
+   - A) QuickSort  
+   - B) Decision Tree  
+   - C) Merge Sort  
+   - D) Binary Search  
+   **Answer:** **Decision Tree** → A supervised learning algorithm used in ML.
+
+---
+
+### ⚙️ DevOps (Set 5)
+21. Which tool is used for **continuous code quality analysis**?  
+   - A) SonarQube  
+   - B) Jenkins  
+   - C) Docker  
+   - D) Git  
+   **Answer:** **SonarQube** → Analyzes code quality and detects bugs/vulnerabilities.
+
+22. What does **immutable infrastructure** mean?  
+   - A) Infrastructure that cannot be changed after deployment  
+   - B) Infrastructure that can be updated anytime  
+   - C) Infrastructure stored in memory only  
+   - D) Infrastructure that is encrypted  
+   **Answer:** **Infrastructure that cannot be changed after deployment** → Updates are made by replacing, not modifying.
+
+23. Which DevOps tool is used for **automating repetitive tasks** with playbooks?  
+   - A) Ansible  
+   - B) Docker  
+   - C) Kubernetes  
+   - D) GitHub Actions  
+   **Answer:** **Ansible** → Uses playbooks for automation and configuration management.
+
+24. What is the main advantage of **microservices architecture** in DevOps?  
+   - A) Monolithic design  
+   - B) Independent deployment and scaling  
+   - C) Single point of failure  
+   - D) Reduced modularity  
+   **Answer:** **Independent deployment and scaling** → Microservices allow teams to deploy and scale independently.
+
+25. Which DevOps practice focuses on **feedback loops between development and operations**?  
+   - A) Continuous Monitoring  
+   - B) Continuous Feedback  
+   - C) Continuous Deployment  
+   - D) Continuous Testing  
+   **Answer:** **Continuous Feedback** → Ensures rapid communication between dev and ops for improvements.
+
+---
+
+✅ You now have **50 questions with answers and explanations** — a solid mega quiz bank across Computer Science and DevOps.  
+
+Would you like me to **expand this even further to 75 or 100 questions**, or should I start organizing them into **easy, medium, and hard levels** so you can practice progressively?
