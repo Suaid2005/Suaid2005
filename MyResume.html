@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Suaid · DevOps & CS Engineering</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef2f5;
+            font-family: 'Inter', 'Segoe UI', 'Roboto', system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            line-height: 1.45;
+        }
+
+        .resume {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 20px 35px -8px rgba(0,20,30,0.2);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* two-column layout */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 34% 66%;
+        }
+
+        /* ========== LEFT PANEL (dark / accent) ========== */
+        .left-panel {
+            background: #13294b;   /* deep navy – professional, ATS-friendly */
+            color: #f0f6fc;
+            padding: 2rem 1.5rem;
+        }
+
+        .name-title {
+            margin-bottom: 2rem;
+        }
+
+        .name-title h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: white;
+            line-height: 1.2;
+            border-bottom: 3px solid #4f8ef7;
+            padding-bottom: 0.6rem;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: #d0e0ff;
+            word-break: break-word;
+        }
+
+        .contact-icon {
+            font-weight: 400;
+            opacity: 0.8;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            color: #b6d0ff;
+            margin: 1.8rem 0 1rem 0;
+            border-bottom: 1.5px solid rgba(255,255,255,0.2);
+            padding-bottom: 0.4rem;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .edu-degree {
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .edu-school {
+            font-size: 0.9rem;
+            color: #cbd9ff;
+            margin: 0.2rem 0 0.1rem;
+        }
+
+        .edu-date {
+            font-size: 0.8rem;
+            color: #9eb3dc;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .distinction {
+            background: #2b3d66;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #d4e0ff;
+            margin-top: 0.25rem;
+        }
+
+        .skill-tag {
+            background: #213a62;
+            color: #e5efff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 0.25rem 0.2rem;
+            border: 1px solid #3f5b8c;
+        }
+
+        .skill-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-block p {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #d0e2ff;
+            font-size: 0.9rem;
+        }
+
+        .cert-item, .interest-item {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #e0ecff;
+            padding-left: 0.5rem;
+            border-left: 2px solid #4f8ef7;
+        }
+
+        /* ========== RIGHT PANEL (white, clean) ========== */
+        .right-panel {
+            background: #ffffff;
+            padding: 2rem 2rem 2rem 1.8rem;
+        }
+
+        .right-section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #13294b;
+            border-bottom: 3px solid #13294b;
+            padding-bottom: 0.35rem;
+            margin: 1.2rem 0 1rem 0;
+            display: inline-block;
+        }
+
+        .profile-text {
+            font-size: 0.95rem;
+            color: #1f2a3f;
+            line-height: 1.5;
+            background: #f9fcff;
+            padding: 1rem 1.2rem;
+            border-radius: 14px;
+            border-left: 4px solid #13294b;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .project-item, .leadership-item, .competition-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0b1d3a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .project-sub {
+            font-weight: 500;
+            color: #3266c0;
+            font-size: 0.8rem;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: #2a374b;
+            margin: 0.3rem 0 0.4rem 0;
+            list-style-type: disc;
+            padding-left: 1.2rem;
+        }
+
+        .project-desc li {
+            margin-bottom: 0.2rem;
+        }
+
+        .tech-used {
+            background: #eef2fa;
+            padding: 0.4rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #13294b;
+            display: inline-block;
+            margin-top: 0.3rem;
+        }
+
+        .leadership-role {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0b1d3a;
+        }
+
+        .leadership-org {
+            font-weight: 500;
+            color: #3266c0;
+            font-size: 0.9rem;
+        }
+
+        .date-badge {
+            font-size: 0.8rem;
+            background: #eaf0fd;
+            color: #13294b;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .competition-name {
+            font-weight: 600;
+            color: #13294b;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e0e7f0;
+            margin: 1rem 0;
+        }
+
+        .flex-between {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* minor spacing */
+        .mt-1 { margin-top: 0.5rem; }
+        .mb-1 { margin-bottom: 0.5rem; }
+
+        /* for ATS: clean readable fonts */
+        @media print {
+            body { background: white; padding: 0.2in; }
+            .resume { box-shadow: none; border-radius: 0; }
+            .left-panel { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="resume-grid">
+            <!-- LEFT COLUMN (dark) -->
+            <div class="left-panel">
+                <div class="name-title">
+                    <h1>MUHAMMAD SUAID</h1>
+                </div>
+                <div class="contact-info">
+                    <p><span class="contact-icon">📍</span> Bengaluru, Karnataka, India</p>
+                    <p><span class="contact-icon">📞</span> +91 8217668044</p>
+                    <p><span class="contact-icon">✉</span> suaidputhrabail75@gmail.com</p>
+                    <p><span class="contact-icon">🔗</span> linkedin.com/in/muhammadsuaid</p>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="section-title">Education</div>
+                <div class="education-item">
+                    <div class="edu-degree">B.Tech – Computer Science Engineering (DevOps)</div>
+                    <div class="edu-school">Presidency University, Bengaluru</div>
+                    <span class="edu-date">2024 – 2028 | Expected graduation: 2028</span>
+                </div>
+                <div class="education-item">
+                    <div class="edu-degree">PUC – PCMC</div>
+                    <div class="edu-school">Yenepoya PU College, Mangalore</div>
+                    <span class="edu-date">May 2022 – Apr 2024</span>
+                    <div class="distinction">Distinction Holder</div>
+                </div>
+                <div class="education-item">
+                    <div class="edu-degree">SSLC</div>
+                    <div class="edu-school">Manshar English Medium School, Belthangady</div>
+                    <span class="edu-date">May 2021 – Apr 2022</span>
+                    <div class="distinction">Distinction Holder</div>
+                </div>
+
+                <!-- TECHNICAL SKILLS (condensed) -->
+                <div class="section-title">Technical Skills</div>
+                <div class="skill-block">
+                    <p>Programming & Development</p>
+                    <span class="skill-tag">Arduino Programming</span>
+                    <span class="skill-tag">Basic C/C++</span>
+                </div>
+                <div class="skill-block">
+                    <p>Tools & Technologies</p>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Graphic Design</span>
+                    <span class="skill-tag">UI Design</span>
+                </div>
+                <div class="skill-block">
+                    <p>Methodologies</p>
+                    <span class="skill-tag">SDLC</span>
+                    <span class="skill-tag">Agile Project Management</span>
+                </div>
+                <div class="skill-block">
+                    <p>Core Skills</p>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Critical Thinking</span>
+                    <span class="skill-tag">Team Collaboration</span>
+                    <span class="skill-tag">Product Ideation</span>
+                </div>
+
+                <!-- CERTIFICATIONS -->
+                <div class="section-title">Certifications</div>
+                <div class="cert-item">✔ Figma Bootcamp — LetsUpgrade</div>
+                <div class="cert-item">✔ Agile Project Management — HP</div>
+                <div class="cert-item">✔ Basics of Artificial Intelligence — Cambridge International Qualifications</div>
+
+                <!-- INTERESTS (compact) -->
+                <div class="section-title">Interests</div>
+                <div style="margin-bottom: 1rem;">
+                    <span class="skill-tag">Software Development</span>
+                    <span class="skill-tag">DevOps</span>
+                    <span class="skill-tag">Artificial Intelligence</span>
+                    <span class="skill-tag">Competitive Programming</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Embedded Systems</span>
+                </div>
+            </div><!-- end left panel -->
+
+            <!-- RIGHT PANEL (white) -->
+            <div class="right-panel">
+                <!-- PROFILE -->
+                <div class="right-section-title">Profile</div>
+                <div class="profile-text">
+                    Computer Engineering student at Presidency University, Bengaluru pursuing B.Tech in Computer Science Engineering allied with DevOps. Interested in Software Engineering, DevOps, and Embedded Systems. Experienced in developing Arduino-based automation systems and contributing to design and technical projects. Passionate about solving real-world problems through technology, collaboration, and continuous learning.
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="right-section-title">Projects</div>
+
+                <div class="project-item">
+                    <div class="flex-between">
+                        <span class="project-title">Waste Sorting Automation System (Arduino Based)</span>
+                    </div>
+                    <ul class="project-desc">
+                        <li>Developed an automated waste segregation prototype using Arduino Uno.</li>
+                        <li>Designed circuit architecture and implemented basic microcontroller coding.</li>
+                        <li>Integrated sensors and hardware components to demonstrate automated sorting functionality.</li>
+                        <li><strong>Project ranked Top 120 out of 576 teams</strong> in a technical competition.</li>
+                    </ul>
+                    <div class="tech-used">Arduino Uno • Embedded Systems • Sensors • Basic C/C++</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="flex-between">
+                        <span class="project-title">Sahityotsav 2025 – Graphic Design Project</span>
+                        <span class="date-badge">Media Team</span>
+                    </div>
+                    <ul class="project-desc">
+                        <li>Worked as part of the Official Media Team of SSF Bengaluru District at District Level Sahityotsav 2025, Al Ameen Law College, Bengaluru.</li>
+                        <li>Designed event results, posters, and digital creatives using Figma for the program.</li>
+                        <li>Collaborated with team members to produce visual communication materials for a large district-level cultural event.</li>
+                        <li>Gained experience in design collaboration, media coordination, and event branding.</li>
+                    </ul>
+                    <div class="tech-used">Figma • Graphic Design • Visual Communication</div>
+                </div>
+
+                <!-- LEADERSHIP & EXPERIENCE -->
+                <div class="right-section-title">Leadership & Experience</div>
+
+                <div class="leadership-item">
+                    <div class="flex-between">
+                        <span class="leadership-role">Media Secretary</span>
+                        <span class="date-badge">Dec 2025 – Present</span>
+                    </div>
+                    <div class="leadership-org">Sunni Students Federation — KR Puram Division</div>
+                    <ul class="project-desc" style="margin-top:0.3rem;">
+                        <li>Designed digital creatives and promotional materials using Figma.</li>
+                        <li>Managed media content and digital communication for division-level events including Sahityotsav 2025.</li>
+                    </ul>
+                </div>
+
+                <div class="leadership-item">
+                    <div class="flex-between">
+                        <span class="leadership-role">Campus Secretary</span>
+                        <span class="date-badge">Dec 2022 – Jul 2024</span>
+                    </div>
+                    <div class="leadership-org">Sunni Students Federation — Belthangady Sector</div>
+                    <ul class="project-desc" style="margin-top:0.3rem;">
+                        <li>Coordinated campus-level student activities and programs.</li>
+                        <li>Assisted in organizing events and managing communication among members.</li>
+                    </ul>
+                </div>
+
+                <!-- COMPETITIONS & PARTICIPATION -->
+                <div class="right-section-title">Competitions & Participation</div>
+
+                <div class="competition-item flex-between">
+                    <span class="competition-name">IEEE Tech Week 2025 Ideathon</span>
+                    <span class="date-badge">Participant</span>
+                </div>
+                <div class="competition-item flex-between">
+                    <span class="competition-name">Tata Crucible Campus Quiz 2025</span>
+                    <span class="date-badge">Participant</span>
+                </div>
+                <div class="competition-item flex-between">
+                    <span class="competition-name">YEN QUEST 2023 – Yenepoya Institute of Technology, Mangalore</span>
+                    <span class="date-badge">Participant</span>
+                </div>
+
+                <!-- extra line for additional details (if any) -->
+                <hr>
+                <div style="font-size: 0.8rem; color: #4e6188; text-align: right; border-top: 1px dashed #cdd9f0; padding-top: 0.6rem;">
+                  
+                </div>
+            </div><!-- end right panel -->
+        </div><!-- end grid -->
+    </div><!-- end resume -->
+</body>
+</html><html>
+
+</html>
