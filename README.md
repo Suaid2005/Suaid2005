@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Muhammad Suaid
-- 👀 I’m interested in DevOps Engineering
-- 🌱 I’m currently learning B.Tech in Computer science and technology allied with DevOps
-- 🖇️ I’m looking to collaborate on GitHub
+- 👀 I’m interested in Robotics and Systems Engineering.
+- 🌱 I’m currently learning B.Tech in Computer science and technology at Presidency University Bangalore.
+- 🖇️ I’m looking for internship opportunities where I can achieve industry level experience.
 - 📫 How to reach me - suaidputhrabail75@gmail.com
 
 <!---
