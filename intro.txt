@@ -1,0 +1,1670 @@
+# DEVOPS LAB EXAM SOLUTIONS (ALL 12 SETS)
+
+The following answers are prepared by referring to the uploaded lab manuals and sheets.    
+
+---
+
+# SET 1 — GIT
+
+# Q1. Install Git and Configure Username & Email
+
+## Aim
+
+To install Git on the system and configure global username and email for version control.
+
+---
+
+## Step 1: Download Git
+
+Open browser and visit:
+
+[Git Official Website](https://git-scm.com?utm_source=chatgpt.com)
+
+Download Git for Windows/Linux.
+
+### Description
+
+This step downloads the Git software.
+
+---
+
+## Step 2: Install Git
+
+Run the downloaded installer.
+
+Choose:
+
+* Next → Next
+* Use Nano editor
+* Git from command line
+* Install
+
+### Description
+
+This installs Git into the system.
+
+---
+
+## Step 3: Verify Git Installation
+
+```bash
+git --version
+```
+
+### Expected Output
+
+```bash
+git version 2.45.0
+```
+
+### Description
+
+Shows installed Git version.
+
+---
+
+## Step 4: Configure Username
+
+```bash
+git config --global user.name "Muhammad Hamdan"
+```
+
+### Description
+
+Sets global Git username.
+
+---
+
+## Step 5: Configure Email
+
+```bash
+git config --global user.email "hamdan@gmail.com"
+```
+
+### Description
+
+Sets global Git email.
+
+---
+
+## Step 6: Verify Configuration
+
+```bash
+git config --list
+```
+
+### Expected Output
+
+```bash
+user.name=Muhammad Hamdan
+user.email=hamdan@gmail.com
+```
+
+### Description
+
+Displays saved Git configuration.
+
+---
+
+## Result
+
+Git was successfully installed and configured.
+
+---
+
+# Q2. Initialize Repository, Create intro.txt and Commit
+
+## Aim
+
+To create a local Git repository and commit a file.
+
+---
+
+## Step 1: Create Folder
+
+```bash
+mkdir gitlab
+cd gitlab
+```
+
+### Description
+
+Creates working directory.
+
+---
+
+## Step 2: Initialize Git Repository
+
+```bash
+git init
+```
+
+### Expected Output
+
+```bash
+Initialized empty Git repository
+```
+
+### Description
+
+Creates hidden `.git` folder.
+
+---
+
+## Step 3: Create File
+
+```bash
+echo "Welcome to Git Lab" > intro.txt
+```
+
+### Description
+
+Creates intro.txt file.
+
+---
+
+## Step 4: Check Status
+
+```bash
+git status
+```
+
+### Expected Output
+
+```bash
+Untracked files:
+intro.txt
+```
+
+### Description
+
+Shows repository status.
+
+---
+
+## Step 5: Add File to Staging
+
+```bash
+git add intro.txt
+```
+
+### Description
+
+Moves file to staging area.
+
+---
+
+## Step 6: Commit File
+
+```bash
+git commit -m "Added intro file"
+```
+
+### Expected Output
+
+```bash
+1 file changed
+create mode 100644 intro.txt
+```
+
+### Description
+
+Stores file permanently in Git history.
+
+---
+
+## Step 7: Verify Commit
+
+```bash
+git log
+```
+
+### Expected Output
+
+```bash
+commit xxxxxxxxx
+Author: Muhammad Hamdan
+Message: Added intro file
+```
+
+---
+
+## Result
+
+Repository was initialized and intro.txt was committed successfully.
+
+---
+
+# SET 2 — GIT
+
+# Q1. Demonstrate Staging vs Committing
+
+## Aim
+
+To understand staging area and commit process in Git.
+
+---
+
+## Step 1: Create Repository
+
+```bash
+mkdir repo2
+cd repo2
+git init
+```
+
+---
+
+## Step 2: Create Files
+
+```bash
+echo "File One" > file1.txt
+echo "File Two" > file2.txt
+```
+
+---
+
+## Step 3: Check Status
+
+```bash
+git status
+```
+
+### Expected Output
+
+```bash
+Untracked files:
+file1.txt
+file2.txt
+```
+
+---
+
+## Step 4: Stage Files
+
+```bash
+git add file1.txt file2.txt
+```
+
+### Description
+
+Files move to staging area only.
+
+---
+
+## Step 5: Verify Staging
+
+```bash
+git status
+```
+
+### Expected Output
+
+```bash
+Changes to be committed:
+new file: file1.txt
+new file: file2.txt
+```
+
+---
+
+## Step 6: Commit Files
+
+```bash
+git commit -m "Added two files"
+```
+
+### Description
+
+Stores staged files permanently.
+
+---
+
+## Step 7: Verify Commit
+
+```bash
+git log
+```
+
+---
+
+## Result
+
+Staging and committing were demonstrated successfully.
+
+---
+
+# Q2. Connect Local Repo to GitHub and Push
+
+## Aim
+
+To connect local repository with GitHub remote repository.
+
+---
+
+## Step 1: Create GitHub Repository
+
+Open:
+
+[GitHub](https://github.com?utm_source=chatgpt.com)
+
+Create repository named `repo2`.
+
+---
+
+## Step 2: Add Remote URL
+
+```bash
+git remote add origin https://github.com/username/repo2.git
+```
+
+### Description
+
+Connects local repo to remote repo.
+
+---
+
+## Step 3: Verify Remote
+
+```bash
+git remote -v
+```
+
+### Expected Output
+
+```bash
+origin https://github.com/username/repo2.git
+```
+
+---
+
+## Step 4: Push Repository
+
+```bash
+git push -u origin master
+```
+
+### Expected Output
+
+```bash
+Branch master set up to track origin/master
+```
+
+---
+
+## Result
+
+Local repository was successfully pushed to GitHub.
+
+---
+
+# SET 3 — GIT
+
+# Q1. Create Repository with Separate Commits
+
+## Aim
+
+To create multiple commits in Git.
+
+---
+
+## Step 1: Create Repository
+
+```bash
+mkdir ch3
+cd ch3
+git init
+```
+
+---
+
+## Step 2: Create file1.txt
+
+```bash
+echo "First File" > file1.txt
+git add file1.txt
+git commit -m "Added file1"
+```
+
+---
+
+## Step 3: Create file2.txt
+
+```bash
+echo "Second File" > file2.txt
+git add file2.txt
+git commit -m "Added file2"
+```
+
+---
+
+## Step 4: Verify
+
+```bash
+git log --oneline
+```
+
+### Expected Output
+
+```bash
+Added file2
+Added file1
+```
+
+---
+
+## Result
+
+Files were committed separately.
+
+---
+
+# Q2. Create Branch and Split file2.txt
+
+## Aim
+
+To create branch and modify files.
+
+---
+
+## Step 1: Create Branch
+
+```bash
+git branch File2Split
+git checkout File2Split
+```
+
+---
+
+## Step 2: Create file2a.txt
+
+```bash
+cp file2.txt file2a.txt
+```
+
+---
+
+## Step 3: Add and Commit
+
+```bash
+git add file2a.txt
+git commit -m "Split file2 into file2a"
+```
+
+---
+
+## Step 4: Verify Branch
+
+```bash
+git branch
+```
+
+### Expected Output
+
+```bash
+* File2Split
+master
+```
+
+---
+
+## Result
+
+Branch creation and file splitting completed successfully.
+
+---
+
+# SET 4 — GIT
+
+# Q1. Modify Same File in Two Branches
+
+## Aim
+
+To understand merge conflicts in Git.
+
+---
+
+## Step 1: Create Repository
+
+```bash
+mkdir merge_lab
+cd merge_lab
+git init
+```
+
+---
+
+## Step 2: Create File
+
+```bash
+echo "Original Content" > file.txt
+git add file.txt
+git commit -m "Initial commit"
+```
+
+---
+
+## Step 3: Create Branch
+
+```bash
+git checkout -b branch1
+```
+
+---
+
+## Step 4: Modify File in branch1
+
+```bash
+echo "Branch1 Content" > file.txt
+git commit -am "Modified in branch1"
+```
+
+---
+
+## Step 5: Switch to Master
+
+```bash
+git checkout master
+```
+
+---
+
+## Step 6: Modify Same File
+
+```bash
+echo "Master Content" > file.txt
+git commit -am "Modified in master"
+```
+
+---
+
+# Q2. Merge and Resolve Conflict
+
+## Step 1: Merge Branch
+
+```bash
+git merge branch1
+```
+
+### Expected Output
+
+```bash
+CONFLICT (content): Merge conflict in file.txt
+```
+
+---
+
+## Step 2: Open file.txt
+
+Conflict markers appear:
+
+```text
+<<<<<<< HEAD
+Master Content
+=======
+Branch1 Content
+>>>>>>> branch1
+```
+
+---
+
+## Step 3: Edit File Manually
+
+```text
+Master and Branch1 Content
+```
+
+---
+
+## Step 4: Add File
+
+```bash
+git add file.txt
+```
+
+---
+
+## Step 5: Commit Merge
+
+```bash
+git commit -m "Resolved merge conflict"
+```
+
+---
+
+## Result
+
+Merge conflict was resolved manually.
+
+---
+
+# SET 5 — ANSIBLE
+
+# Q1. Compress Directory using tar.gz and Remove Original Files
+
+## Aim
+
+To compress files using Ansible archive module.
+
+---
+
+## Step 1: Create Directory
+
+```bash
+mkdir sampledir
+touch sampledir/file1.txt sampledir/file2.txt
+```
+
+---
+
+## Step 2: Compress Directory
+
+```bash
+ansible -i inventory.ini local -m archive -a "path=sampledir dest=sampledir.tar.gz format=gz remove=true"
+```
+
+### Expected Output
+
+```bash
+localhost CHANGED
+dest sampledir.tar.gz
+```
+
+### Description
+
+Creates compressed archive and removes original directory.
+
+---
+
+## Step 3: Verify
+
+```bash
+ls
+```
+
+### Expected Output
+
+```bash
+sampledir.tar.gz
+```
+
+---
+
+## Result
+
+Directory compressed successfully.
+
+---
+
+# Q2. Create ZIP and BZIP Archives
+
+## Aim
+
+To create ZIP and BZIP compressed archives.
+
+---
+
+## ZIP Archive
+
+### Step 1: Create Directory
+
+```bash
+mkdir mydata
+touch mydata/a.txt mydata/b.txt
+```
+
+---
+
+### Step 2: Create ZIP
+
+```bash
+ansible -i inventory.ini local -m archive -a "path=mydata dest=mydata.zip format=zip"
+```
+
+---
+
+### Step 3: Verify
+
+```bash
+ls
+```
+
+### Expected Output
+
+```bash
+mydata.zip
+```
+
+---
+
+## BZIP Archive
+
+### Step 1: Create File
+
+```bash
+touch fileB.txt
+```
+
+---
+
+### Step 2: Create BZIP Archive
+
+```bash
+ansible -i inventory.ini local -m archive -a "path=fileB.txt dest=fileB.tar.bz2 format=bz2"
+```
+
+---
+
+### Step 3: Verify
+
+```bash
+ls
+```
+
+### Expected Output
+
+```bash
+fileB.tar.bz2
+```
+
+---
+
+## Result
+
+ZIP and BZIP archives were created successfully.
+
+---
+
+# SET 6 — ANSIBLE
+
+# Q1. Execute Shell Command using Playbook
+
+## Aim
+
+To execute shell commands using Ansible playbook.
+
+---
+
+## Step 1: Create Playbook
+
+```bash
+nano shell.yml
+```
+
+---
+
+## Step 2: Add Content
+
+```yaml
+- name: Run shell command
+  hosts: local
+  gather_facts: no
+
+  tasks:
+    - name: Show date
+      shell: date
+```
+
+---
+
+## Step 3: Run Playbook
+
+```bash
+ansible-playbook -i inventory.ini shell.yml
+```
+
+### Expected Output
+
+```bash
+TASK [Show date]
+changed: true
+```
+
+---
+
+## Result
+
+Shell command executed successfully.
+
+---
+
+# Q2. Execute Command with Pipe and Redirection
+
+## Aim
+
+To use pipe and redirection using Ansible shell module.
+
+---
+
+## Step 1: Pipe Command
+
+```bash
+ansible -i inventory.ini local -m shell -a "ls -l | grep txt"
+```
+
+---
+
+## Step 2: Redirection Command
+
+```bash
+ansible -i inventory.ini local -m shell -a "ls > output.txt"
+```
+
+---
+
+## Step 3: Verify Output
+
+```bash
+cat output.txt
+```
+
+### Expected Output
+
+```bash
+file1.txt
+file2.txt
+```
+
+---
+
+## Result
+
+Pipe and redirection executed successfully.
+
+---
+
+# SET 7 — ANSIBLE
+
+# Q1. Create File on Target Machine
+
+## Aim
+
+To create a file on target machines using Ansible playbook.
+
+---
+
+## Step 1: Create Playbook
+
+```bash
+nano create_file.yml
+```
+
+---
+
+## Step 2: Add YAML Content
+
+```yaml
+- name: Create file on servers
+  hosts: local
+  gather_facts: no
+
+  tasks:
+    - name: Create sample file
+      file:
+        path: /tmp/sample.txt
+        state: touch
+```
+
+---
+
+## Step 3: Run Playbook
+
+```bash
+ansible-playbook -i inventory.ini create_file.yml
+```
+
+### Expected Output
+
+```bash
+TASK [Create sample file]
+changed: true
+```
+
+---
+
+## Step 4: Verify
+
+```bash
+ls /tmp
+```
+
+### Expected Output
+
+```bash
+sample.txt
+```
+
+---
+
+## Result
+
+File created successfully.
+
+---
+
+# Q2. Create Multiple Directories using Loop
+
+## Aim
+
+To create multiple directories using loop.
+
+---
+
+## Step 1: Create Playbook
+
+```bash
+nano multi_dir.yml
+```
+
+---
+
+## Step 2: Add YAML Code
+
+```yaml
+- name: Create directories
+  hosts: local
+  gather_facts: no
+
+  tasks:
+    - name: Create multiple dirs
+      file:
+        path: "/tmp/{{ item }}"
+        state: directory
+
+      with_items:
+        - dir1
+        - dir2
+        - dir3
+```
+
+---
+
+## Step 3: Run Playbook
+
+```bash
+ansible-playbook -i inventory.ini multi_dir.yml
+```
+
+---
+
+## Step 4: Verify
+
+```bash
+ls /tmp
+```
+
+### Expected Output
+
+```bash
+dir1
+dir2
+dir3
+```
+
+---
+
+## Result
+
+Directories created successfully.
+
+---
+
+# SET 8 — SELENIUM
+
+# Q1. Open google.co.in using ChromeDriver
+
+## Aim
+
+To automate Chrome browser using Selenium WebDriver.
+
+---
+
+## Step 1: Install Selenium
+
+```bash
+pip install selenium
+```
+
+---
+
+## Step 2: Create Python File
+
+```bash
+nano open_google.py
+```
+
+---
+
+## Step 3: Write Code
+
+```python
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("https://www.google.co.in")
+
+input("Press Enter to close")
+
+driver.quit()
+```
+
+---
+
+## Step 4: Run Script
+
+```bash
+python open_google.py
+```
+
+### Expected Output
+
+Chrome browser opens Google homepage.
+
+---
+
+## Result
+
+Google opened successfully using ChromeDriver.
+
+---
+
+# Q2. Verify Title and Redirection
+
+## Aim
+
+To verify page title and URL redirection.
+
+---
+
+## Step 1: Create Python File
+
+```bash
+nano verify_google.py
+```
+
+---
+
+## Step 2: Write Code
+
+```python
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("https://www.google.com")
+
+print("Title:", driver.title)
+print("URL:", driver.current_url)
+
+if "Google" in driver.title:
+    print("Title verification passed")
+
+if "google.co.in" in driver.current_url:
+    print("Redirection passed")
+
+input("Press Enter")
+
+driver.quit()
+```
+
+---
+
+## Step 3: Run Script
+
+```bash
+python verify_google.py
+```
+
+### Expected Output
+
+```bash
+Title: Google
+URL: https://www.google.co.in
+Title verification passed
+Redirection passed
+```
+
+---
+
+## Result
+
+Title and redirection verified successfully.
+
+---
+
+# SET 9 — SELENIUM
+
+# Q1. Open Google using Internet Explorer Driver
+
+## Aim
+
+To open Google using Internet Explorer WebDriver.
+
+---
+
+## Step 1: Download IE Driver
+
+Download:
+
+[Selenium Downloads](https://www.selenium.dev/downloads/?utm_source=chatgpt.com)
+
+---
+
+## Step 2: Create Python File
+
+```bash
+nano ie_test.py
+```
+
+---
+
+## Step 3: Write Code
+
+```python
+from selenium import webdriver
+from selenium.webdriver.ie.service import Service
+
+service = Service("IEDriverServer.exe")
+
+driver = webdriver.Ie(service=service)
+
+driver.get("https://www.google.co.in")
+
+print(driver.title)
+
+input("Press Enter")
+
+driver.quit()
+```
+
+---
+
+## Step 4: Run Script
+
+```bash
+python ie_test.py
+```
+
+### Expected Output
+
+```bash
+Google
+```
+
+---
+
+## Result
+
+Google opened successfully in Internet Explorer.
+
+---
+
+# Q2. Launch Browser based on User Input
+
+## Aim
+
+To launch browser dynamically based on user input.
+
+---
+
+## Step 1: Create File
+
+```bash
+nano browser_test.py
+```
+
+---
+
+## Step 2: Write Code
+
+```python
+from selenium import webdriver
+
+browser = input("Enter browser name: ")
+
+if browser == "chrome":
+    driver = webdriver.Chrome()
+
+elif browser == "firefox":
+    driver = webdriver.Firefox()
+
+else:
+    print("Invalid browser")
+    exit()
+
+driver.get("https://www.google.com")
+
+input("Press Enter")
+
+driver.quit()
+```
+
+---
+
+## Step 3: Run Script
+
+```bash
+python browser_test.py
+```
+
+### Expected Output
+
+```bash
+Enter browser name: chrome
+```
+
+Browser opens Google.
+
+---
+
+## Result
+
+Browser launched successfully using user input.
+
+---
+
+# SET 10 — SELENIUM
+
+# Q1. Close Browser without quit()
+
+## Aim
+
+To close browser using close() method.
+
+---
+
+## Step 1: Create Python File
+
+```bash
+nano close_browser.py
+```
+
+---
+
+## Step 2: Write Code
+
+```python
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("https://www.google.com")
+
+input("Press Enter")
+
+driver.close()
+```
+
+---
+
+## Step 3: Run Script
+
+```bash
+python close_browser.py
+```
+
+### Expected Output
+
+Browser closes after pressing Enter.
+
+---
+
+## Result
+
+Browser closed successfully without using quit().
+
+---
+
+# Q2. Automate Dropdown/Listbox Selection
+
+## Aim
+
+To select option from dropdown using Selenium.
+
+---
+
+## Step 1: Create Python File
+
+```bash
+nano listbox.py
+```
+
+---
+
+## Step 2: Write Code
+
+```python
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select
+
+driver = webdriver.Chrome()
+
+driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select")
+
+driver.switch_to.frame("iframeResult")
+
+dropdown = Select(driver.find_element("tag name", "select"))
+
+dropdown.select_by_visible_text("Saab")
+
+input("Press Enter")
+
+driver.close()
+```
+
+---
+
+## Step 3: Run Script
+
+```bash
+python listbox.py
+```
+
+### Expected Output
+
+Dropdown opens and Saab gets selected.
+
+---
+
+## Result
+
+Dropdown selection automated successfully.
+
+---
+
+# SET 11 — JENKINS
+
+# Q1. Install Jenkins and Create Job using Apache Ant
+
+## Aim
+
+To install Jenkins and create Apache Ant build job.
+
+---
+
+## Step 1: Verify Java
+
+```bash
+java --version
+```
+
+---
+
+## Step 2: Download Jenkins
+
+Open:
+
+[Jenkins Official Website](https://www.jenkins.io?utm_source=chatgpt.com)
+
+Download Windows installer.
+
+---
+
+## Step 3: Install Jenkins
+
+* Double click `.msi`
+* Click Next
+* Install
+
+---
+
+## Step 4: Open Jenkins
+
+Open browser:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## Step 5: Unlock Jenkins
+
+Open file:
+
+```text
+C:\Program Files\Jenkins\secrets\initialAdminPassword
+```
+
+Copy password and paste in browser.
+
+---
+
+## Step 6: Install Suggested Plugins
+
+Click:
+
+* Install Suggested Plugins
+
+---
+
+## Step 7: Create Ant Job
+
+* Dashboard → New Item
+* Enter Job Name
+* Select Freestyle Project
+* Build Step → Invoke Ant
+
+---
+
+## Result
+
+Jenkins installed and Ant job created successfully.
+
+---
+
+# Q2. Create Maven and Batch Script Jobs
+
+## Aim
+
+To create Maven and Batch Script jobs in Jenkins.
+
+---
+
+## Maven Job
+
+### Step 1: Create Job
+
+* New Item → Maven Project
+
+---
+
+### Step 2: Add Goals
+
+```text
+clean install
+```
+
+---
+
+### Step 3: Build Now
+
+Expected:
+
+```text
+BUILD SUCCESS
+```
+
+---
+
+## Batch Script Job
+
+### Step 1: Create Freestyle Project
+
+---
+
+### Step 2: Add Build Step
+
+Choose:
+
+* Execute Windows batch command
+
+---
+
+### Step 3: Add Commands
+
+```bat
+echo Hello Jenkins
+dir
+```
+
+---
+
+### Step 4: Build Job
+
+Expected:
+
+```text
+BUILD SUCCESS
+```
+
+---
+
+## Result
+
+Maven and Batch jobs executed successfully.
+
+---
+
+# SET 12 — JENKINS NODES
+
+# Q1. Add Linux Node in Jenkins
+
+## Aim
+
+To configure Linux node in Jenkins.
+
+---
+
+## Step 1: Open Jenkins
+
+Go to:
+
+```text
+Manage Jenkins → Nodes → New Node
+```
+
+---
+
+## Step 2: Enter Node Details
+
+```text
+Node Name: linux-node
+Type: Permanent Agent
+```
+
+---
+
+## Step 3: Configure Node
+
+```text
+Remote Root Directory:
+/home/user/jenkins-node
+
+Label:
+linux
+```
+
+---
+
+## Step 4: Launch Method
+
+Choose:
+
+```text
+Launch agent via JNLP
+```
+
+---
+
+## Step 5: Run Agent on Linux
+
+```bash
+curl -sO http://localhost:8080/jnlpJars/agent.jar
+```
+
+---
+
+## Step 6: Connect Node
+
+```bash
+java -jar agent.jar -url http://localhost:8080 -secret YOUR_SECRET -name "linux-node"
+```
+
+### Expected Output
+
+```bash
+Connected
+```
+
+---
+
+## Result
+
+Linux node added successfully.
+
+---
+
+# Q2. Assign Java Job to Linux Node
+
+## Aim
+
+To run Java/Maven job on Linux node.
+
+---
+
+## Step 1: Open Maven Job
+
+Dashboard → Maven Job → Configure
+
+---
+
+## Step 2: Restrict Node
+
+Tick:
+
+```text
+Restrict where this project can be run
+```
+
+Enter:
+
+```text
+linux
+```
+
+---
+
+## Step 3: Add Maven Goals
+
+```text
+clean install -DskipTests
+```
+
+---
+
+## Step 4: Build Job
+
+Click:
+
+```text
+Build Now
+```
+
+---
+
+## Step 5: Verify Console Output
+
+Expected:
+
+```text
+Running on linux-node
+BUILD SUCCESS
+```
+
+---
+
+## Result
+
+Java-based Maven job executed successfully on Linux node.
